@@ -1,0 +1,16 @@
+<template>
+	<div>
+		<div class="bannerBJYH fixed-header">
+			<span class="title">&nbsp;</span>
+			<span class="backGo" @click.stop="goBack()">返回</span>
+		</div>
+		<section v-if="articleContentInfo && showContent" class="article-content-body">
+			<h1>{{articleContentInfo.Title}}</h1>
+			<div class="fLip gap10 pt10"><span>{{articleContentInfo.Date}}</span><span>{{articleContentInfo.From}}</span></div>
+			<p class="lh20 pt13" v-html="articleContent">
+			</p>
+		</section>
+	</div>
+</template>
+
+<script>
