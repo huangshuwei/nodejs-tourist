@@ -16,4 +16,4 @@ var watcher = fs.watch('../../test/监视文件和目录变化/test.txt', {persi
     console.log('fileName:', fileName);
 })
 
-
+watcher.close();
