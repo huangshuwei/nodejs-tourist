@@ -15,4 +15,5 @@ var watcher = fs.watch('../../test/监视文件和目录变化', {persistent: tr
     console.log('fileName:', fileName);
 })
 
-watcher.close();
+//当需要对文件停止监视时
+//watcher.close();
