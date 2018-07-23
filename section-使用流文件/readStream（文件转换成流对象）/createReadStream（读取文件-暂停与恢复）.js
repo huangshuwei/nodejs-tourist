@@ -1,10 +1,16 @@
 /*
 *fs.createReadStream 创建一个将文件内容读取为流数据的 ReadStream 对象
+*
+* ReadStream.pause 暂停 data 事件的触发
+* ReadStream.resume 恢复 data 事件的触发
+*
 * */
 
 let fs = require('fs');
 
-let readStream = fs.createReadStream('../../test/section-使用流文件/readStream/message.txt',{start:0,end:30});
+let readStream = fs.createReadStream('../../test/section-使用流文件/createReadStream/message.txt',{start:0,end:30});
+
+readStream.pause();
 
 readStream.on('open',(fd)=>{
 
@@ -30,3 +36,7 @@ readStream.on('error',(err)=>{
 
     console.log('文件读取失败：',err);
 })
+
+setTimeout(()=>{
+    readStream.resume();
+},2000)
