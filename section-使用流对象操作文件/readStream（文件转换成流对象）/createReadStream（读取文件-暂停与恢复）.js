@@ -8,7 +8,7 @@
 
 let fs = require('fs');
 
-let readStream = fs.createReadStream('../../test/section-使用流文件/createReadStream/message.txt',{start:0,end:30});
+let readStream = fs.createReadStream('../../test/section-使用流文件操作文件/createReadStream/message.txt',{start:0,end:30});
 
 readStream.pause();
 

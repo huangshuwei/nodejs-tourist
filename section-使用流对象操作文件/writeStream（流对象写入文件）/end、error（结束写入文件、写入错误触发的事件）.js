@@ -7,7 +7,7 @@
 
 let fs = require('fs');
 
-let path = '../../test/section-使用流文件/createWriteStream/';
+let path = '../../test/section-使用流文件操作文件/createWriteStream/';
 
 let writeStream = fs.createWriteStream(path + 'test-drain.txt');
 
