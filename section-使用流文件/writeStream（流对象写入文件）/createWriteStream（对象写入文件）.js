@@ -1,4 +1,11 @@
+/*
+* fs.createReadStream 将流数据也如文件中的 WriteStream 对象
+*
+* 如果写入的文件找不到则会创建该文件，如果目录不存在也会创建该目录
+* */
+
 let fs = require('fs');
+
 
 let path = '../../test/section-使用流文件/createWriteStream/';
 
