@@ -8,9 +8,11 @@ let writeStream = fs.createWriteStream(path + 'another-message.txt');
 
 readStream.on('data',(data)=>{
 
-    writeStream.write(data,()=>{
+    let hasSpace = writeStream.write(data,()=>{
         console.log('-------这是当前被写入的文件 start-------\r\n',data.toString(),'\r\n-------这是当前被写入的文件 end-------\r\n')
     });
+
+    console.log('缓存区中是否还有空间：',hasSpace)
 })
 
 writeStream.on('open',(fd)=>{
